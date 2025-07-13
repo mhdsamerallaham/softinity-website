@@ -1,0 +1,1030 @@
+/* Softinity Dark Theme CSS - Updated with Spacing Fix */
+:root {
+  /* Brand Colors */
+  --primary-green: #64f3b0;
+  --primary-purple: #9b5cfb;
+  --accent-green: #4fd396;
+  --accent-purple: #8a4ee8;
+  
+  /* Dark Background Colors */
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #1a1f2e;
+  --bg-tertiary: #2a2f3e;
+  --bg-card: #1e2332;
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #b8bcc8;
+  --text-muted: #8a8f9a;
+  
+  /* Border & Shadow */
+  --border-color: #2a2f3e;
+  --shadow-primary: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 30px rgba(100, 243, 176, 0.2);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary-green), var(--primary-purple));
+  --gradient-secondary: linear-gradient(135deg, var(--accent-green), var(--accent-purple));
+  --gradient-bg: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Arabic Font Support */
+[dir="rtl"] {
+  font-family: 'Cairo', 'Inter', sans-serif;
+}
+
+/* Container Styles - FIXED SPACING */
+.container-fluid {
+  padding: 0;
+}
+
+.main-container {
+  background: var(--gradient-bg);
+  min-height: 100vh;
+  padding-top: 90px; /* FIXED: Navbar yüksekliği + biraz extra */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  background: var(--gradient-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  background: var(--gradient-secondary);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green);
+  background: transparent;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary-green);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 15px;
+  box-shadow: var(--shadow-primary);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  color: var(--text-primary) !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-green);
+}
+
+.card-body {
+  padding: 2rem;
+  background: var(--bg-card) !important;
+}
+
+/* Service Cards Specific */
+.service-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: all 0.3s ease;
+}
+
+.service-card .card-body {
+  background: var(--bg-card) !important;
+}
+
+/* Navigation - FIXED */
+.navbar {
+  background: rgba(26, 31, 46, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  height: 80px; /* FIXED: Sabit yükseklik */
+  z-index: 1030;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white !important;
+  line-height: 1.2; /* FIXED: Dikey hizalama */
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary-green) !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: var(--gradient-primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Hero Section - FIXED */
+.hero-section {
+  background: var(--gradient-bg);
+  min-height: calc(100vh - 90px); /* FIXED: Navbar padding'i çıkar */
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 0 !important; /* FIXED: Hero için extra padding kaldır */
+  margin-top: 0 !important;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 60%, rgba(100, 243, 176, 0.1), transparent),
+              radial-gradient(circle at 70% 30%, rgba(155, 92, 251, 0.1), transparent);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: var(--primary-purple);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+/* Page Hero Sections - FIXED */
+.contact-hero,
+.projects-hero,
+.services-hero,
+.about-hero {
+  padding-top: 3rem !important; /* FIXED: Sadece içerik için padding */
+  margin-top: 0 !important; /* FIXED: Bootstrap mt-5 sınıfını iptal et */
+}
+
+/* Page Content Fix */
+.contact-page > section:first-child,
+.services-page > section:first-child,
+.projects-page > section:first-child,
+.about-page > section:first-child {
+  margin-top: 0 !important;
+  padding-top: 2rem !important;
+}
+
+.page-content {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Code-like styling */
+.code-text {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  background: var(--bg-tertiary);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  color: var(--primary-green);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+/* WhatsApp Chat Button */
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-primary);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsapp-chat:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Language Selector - FIXED */
+.language-selector {
+  position: relative;
+  margin-left: 1rem; /* FIXED: Pozisyon düzeltmesi */
+}
+
+.language-dropdown {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.language-dropdown:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 0.2rem rgba(100, 243, 176, 0.25);
+}
+
+/* Form Styles */
+.form-control {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  padding: 12px 15px;
+}
+
+.form-control:focus {
+  background: var(--bg-card);
+  border-color: var(--primary-green);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem rgba(100, 243, 176, 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0 2rem;
+  margin-top: 5rem;
+}
+
+.footer-content {
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-green);
+}
+
+/* Responsive Design - UPDATED */
+@media (max-width: 768px) {
+  .main-container {
+    padding-top: 85px; /* FIXED: Mobilde biraz daha az */
+  }
+  
+  .navbar {
+    height: 75px;
+    padding: 0.75rem 0;
+  }
+  
+  .hero-section {
+    min-height: calc(100vh - 85px);
+  }
+  
+  .contact-hero,
+  .projects-hero,
+  .services-hero,
+  .about-hero {
+    padding-top: 2rem !important;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Tech Cards Enhanced */
+.tech-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-green) !important;
+  box-shadow: var(--shadow-hover);
+}
+
+/* Process Steps */
+.process-step {
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+}
+
+/* Service Cards Enhanced */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(100, 243, 176, 0.3);
+}
+
+.service-icon {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 4px;
+}
+
+/* Project Cards */
+.project-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(100, 243, 176, 0.2);
+}
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image {
+  transition: all 0.3s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Filter Buttons */
+.filter-buttons .btn {
+  margin: 0 0.25rem;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn-outline-primary {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+}
+
+.filter-buttons .btn-outline-primary:hover {
+  background: var(--primary-green);
+  border-color: var(--primary-green);
+  color: var(--bg-primary);
+}
+
+.filter-buttons .btn-primary {
+  background: var(--gradient-primary);
+  border: none;
+}
+
+/* Project Modal - Enhanced */
+.project-modal {
+  z-index: 9999 !important;
+}
+
+.project-modal .modal-dialog {
+  z-index: 9999 !important;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.project-modal .modal-content {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 15px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden;
+}
+
+.project-modal .modal-header {
+  background: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  padding: 1.5rem !important;
+}
+
+.project-modal .modal-title {
+  color: var(--primary-green) !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+}
+
+.project-modal .modal-body {
+  background: var(--bg-card) !important;
+  padding: 2rem !important;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.project-modal .modal-footer {
+  background: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-color) !important;
+  padding: 1.5rem !important;
+}
+
+.project-modal .btn-close {
+  filter: invert(1) !important;
+  opacity: 0.8;
+}
+
+.project-modal .btn-close:hover {
+  opacity: 1;
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  z-index: 9998 !important;
+}
+
+/* Modal Animation */
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+/* Scrollbar in Modal */
+.project-modal .modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-modal .modal-body::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+}
+
+.project-modal .modal-body::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 3px;
+}
+
+.project-modal .modal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-green);
+}
+
+/* Project Tech Badges */
+.project-tech .badge {
+  background: transparent !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Projects Page Responsive */
+@media (max-width: 768px) {
+  .filter-buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filter-buttons .btn {
+    margin: 0.25rem;
+    font-size: 0.9rem;
+  }
+}
+  
+/* RTL Support */
+[dir="rtl"] .navbar-nav {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+[dir="rtl"] .whatsapp-chat {
+  left: 20px;
+  right: auto;
+}
+
+/* Contact Page Styles */
+.contact-form-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-primary);
+}
+
+.contact-info-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+  border-color: var(--primary-green);
+  transform: translateY(-2px);
+}
+
+/* Form Controls Enhanced */
+.form-control:focus,
+.form-select:focus {
+  background: var(--bg-tertiary) !important;
+  border-color: var(--primary-green) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(100, 243, 176, 0.25) !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted) !important;
+}
+
+.form-label {
+  color: var(--text-primary) !important;
+  font-weight: 500;
+}
+
+/* Social Links Animation */
+.social-links a {
+  transition: all 0.3s ease !important;
+}
+
+.social-links a:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Map Container */
+.map-container {
+  box-shadow: var(--shadow-primary);
+  transition: all 0.3s ease;
+}
+
+.map-container:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* Response Time Stats */
+.response-stat {
+  transition: all 0.3s ease;
+}
+
+.response-stat:hover {
+  transform: translateY(-5px);
+}
+
+/* Loading & Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes loadingDots {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-out;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease-in;
+}
+
+/* Loading States */
+.loading-skeleton {
+  background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-card) 50%, var(--bg-tertiary) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Improved Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance Optimizations */
+* {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Enhanced Hover Effects */
+.interactive-element {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-element:hover {
+  transform: translateY(-2px);
+}
+
+/* Focus States for Accessibility */
+button:focus,
+.btn:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 2px;
+}
+
+/* HomePage Specific Styles */
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(100, 243, 176, 0.15);
+}
+
+.service-preview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(100, 243, 176, 0.2);
+}
+
+.service-preview-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-green) !important;
+  box-shadow: 0 8px 25px rgba(100, 243, 176, 0.15);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Animations */
+.stat-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.service-preview-card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.tech-item {
+  animation: fadeInUp 0.6s ease-out;
+  animation-delay: calc(var(--animation-order) * 0.1s);
+}
+
+.testimonial-card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Hover Glow Effects */
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, transparent, rgba(100, 243, 176, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.stat-card:hover::before {
+  opacity: 1;
+}
+
+/* CTA Section Enhancements */
+.cta-section .btn-primary {
+  box-shadow: 0 4px 15px rgba(100, 243, 176, 0.4);
+}
+
+.cta-section .btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(100, 243, 176, 0.6);
+  transform: translateY(-2px);
+}
+
+.cta-section .btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(100, 243, 176, 0.3);
+}
+
+/* Advanced Micro-interactions */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.service-icon {
+  animation: float-gentle 3s ease-in-out infinite;
+}
+
+.service-preview-card:nth-child(2) .service-icon {
+  animation-delay: 1s;
+}
+
+.service-preview-card:nth-child(3) .service-icon {
+  animation-delay: 2s;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .stat-card,
+  .service-preview-card,
+  .testimonial-card {
+    margin-bottom: 2rem;
+  }
+  
+  .tech-item {
+    margin-bottom: 1rem;
+  }
+  
+  .cta-buttons .btn {
+    margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+  }
+}
+  
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Card Title Colors */
+.card-title {
+  color: var(--primary-green) !important;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: var(--text-secondary) !important;
+}
+
+/* Service Card Specific */
+.service-title {
+  color: var(--primary-green) !important;
+  font-weight: 600;
+}
+
+.service-description {
+  color: var(--text-secondary) !important;
+}
+
+.features-title {
+  color: var(--primary-green) !important;
+}
+
+.feature-item {
+  color: var(--text-secondary) !important;
+}
+
+/* Make sure all text has proper colors */
+.services-page h1,
+.services-page h2,
+.services-page h3,
+.services-page h4,
+.services-page h5,
+.services-page h6 {
+  color: var(--text-primary) !important;
+}
+
+.services-page p {
+  color: var(--text-secondary) !important;
+}
+
+/* Tech card text */
+.tech-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.tech-card h6 {
+  color: var(--primary-green) !important;
+}
+
+.tech-card small {
+  color: var(--text-muted) !important;
+}

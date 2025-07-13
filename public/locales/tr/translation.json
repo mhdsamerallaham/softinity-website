@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Softinity'ye Hoş Geldiniz",
+    "subtitle": "İşinizi ileriye taşıyan yenilikçi dijital çözümler yaratıyoruz",
+    "cta": "Başlayın",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "about": {
+    "title": "Softinity Hakkında",
+    "subtitle": "Dijital dönüşümü yönlendiren yenilikçi çözümler yaratmaya adanmış tutkulu bir geliştirici ve veri bilimci ekibiyiz.",
+    "vision": {
+      "title": "Vizyonumuz",
+      "content": "Yenilikçi dijital çözümler ve veri odaklı içgörüler arayan işletmeler için önde gelen teknoloji ortağı olmak."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "content": "En son web geliştirme, yapay zeka çözümleri ve veri analitiği ile işletmeleri güçlendirerek sürdürülebilir büyüme elde etmelerini sağlıyoruz."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "innovation": "İnovasyon",
+      "quality": "Kalite",
+      "collaboration": "İş Birliği",
+      "excellence": "Mükemmellik"
+    },
+    "stats": {
+      "projects": "Tamamlanan Proje",
+      "clients": "Mutlu Müşteri",
+      "experience": "Yıl Deneyim",
+      "satisfaction": "Müşteri Memnuniyeti"
+    },
+    "team": {
+      "title": "Ekibimiz",
+      "subtitle": "Softinity'nin arkasındaki uzmanlarla tanışın"
+    }
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "İş ihtiyaçlarınız için kapsamlı teknoloji çözümleri",
+    "webDevelopment": "Web Geliştirme",
+    "webDevelopmentDesc": "En son teknolojilerle geliştirilmiş modern, duyarlı web siteleri ve web uygulamaları",
+    "mobileApp": "Mobil Uygulama Geliştirme",
+    "mobileAppDesc": "iOS ve Android için native ve cross-platform mobil uygulamalar",
+    "dataAnalytics": "Veri Analitiği",
+    "dataAnalyticsDesc": "Gelişmiş analitik ve raporlama ile verilerinizi eyleme dönüştürülebilir içgörülere çevirin",
+    "aiSolutions": "Yapay Zeka Çözümleri",
+    "aiSolutionsDesc": "Süreçlerinizi otomatikleştirmek ve optimize etmek için yapay zeka ve makine öğrenimi çözümleri",
+    "consulting": "Teknoloji Danışmanlığı",
+    "consultingDesc": "Bilinçli kararlar vermenize yardımcı olacak stratejik teknoloji danışmanlığı",
+    "cloudServices": "Bulut Hizmetleri",
+    "cloudServicesDesc": "Ölçeklenebilir bulut altyapısı ve göç hizmetleri",
+    "technologies": {
+      "title": "Kullandığımız Teknolojiler",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Veritabanı",
+      "cloud": "Bulut ve DevOps"
+    },
+    "process": {
+      "title": "Geliştirme Sürecimiz",
+      "discovery": "Keşif",
+      "design": "Tasarım",
+      "development": "Geliştirme",
+      "testing": "Test",
+      "deployment": "Dağıtım",
+      "maintenance": "Bakım"
+    }
+  },
+  "projects": {
+    "title": "Projelerimiz",
+    "subtitle": "En son çalışmalarımız ve başarılarımızın vitribi",
+    "filter": {
+      "all": "Tüm Projeler",
+      "corporate": "Kurumsal",
+      "ecommerce": "E-ticaret",
+      "dataai": "Veri ve Yapay Zeka",
+      "portfolio": "Portföy",
+      "webdev": "Web Geliştirme"
+    },
+    "viewProject": "Projeyi Görüntüle",
+    "liveDemo": "Canlı Demo",
+    "sourceCode": "Kaynak Kod",
+    "technologies": "Kullanılan Teknolojiler",
+    "category": "Kategori",
+    "client": "Müşteri",
+    "duration": "Süre",
+    "status": "Durum"
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Bir sonraki projenizi başlatmaya hazır mısınız? Uzman ekibimizle iletişime geçin ve birlikte harika bir şeyler inşa edelim.",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "address": "Adres",
+    "other": "Diğer",
+    "form": {
+      "title": "Bize Mesaj Gönderin",
+      "name": "Ad Soyad",
+      "namePlaceholder": "Adınızı ve soyadınızı girin",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "phone": "Telefon Numarası",
+      "phonePlaceholder": "Telefon numaranızı girin",
+      "company": "Şirket",
+      "companyPlaceholder": "Şirket adınızı girin",
+      "service": "İlgilendiğiniz Hizmet",
+      "selectService": "Bir hizmet seçin",
+      "subject": "Konu",
+      "subjectPlaceholder": "Konuyu girin",
+      "message": "Mesaj",
+      "messagePlaceholder": "Projeniz veya sorgunuz hakkında bize bilgi verin",
+      "send": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "successMessage": "Teşekkürler! Mesajınız başarıyla gönderildi. Kısa sürede size geri döneceğiz.",
+      "errorMessage": "Üzgünüz, mesajınızı gönderirken bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+    },
+    "info": {
+      "title": "İletişim Bilgileri"
+    },
+    "social": {
+      "title": "Bizi Takip Edin"
+    },
+    "hours": {
+      "title": "Çalışma Saatleri",
+      "weekdays": "Pazartesi - Cuma",
+      "saturday": "Cumartesi",
+      "sunday": "Pazar",
+      "closed": "Kapalı"
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "question1": "Tipik bir proje ne kadar sürer?",
+      "answer1": "Proje süreleri karmaşıklık ve kapsamına bağlı olarak değişir. Basit web siteleri genellikle 2-4 hafta sürerken, karmaşık uygulamalar 3-6 ay alabilir.",
+      "question2": "Sürekli destek sağlıyor musunuz?",
+      "answer2": "Evet, projenizin optimal performansını sürdürmesi için kapsamlı bakım ve destek paketleri sunuyoruz.",
+      "question3": "Hangi teknolojilerde uzmanlaşıyorsunuz?",
+      "answer3": "React, Node.js, Python ve AWS, Azure gibi çeşitli bulut platformları dahil olmak üzere modern web teknolojilerinde uzmanlaşıyoruz.",
+      "question4": "Mevcut projelerle yardım edebilir misiniz?",
+      "answer4": "Kesinlikle! Bizim tarafımızdan veya başka bir ekip tarafından geliştirilmiş olsun, mevcut projeleri denetleyebilir, optimize edebilir ve geliştirebiliriz."
+    },
+    "location": {
+      "title": "Konumumuz",
+      "description": "Ofisimizi ziyaret edin veya sanal bir toplantı planlayın",
+      "viewMap": "Haritada Görüntüle"
+    }
+  },
+  "footer": {
+    "company": "Softinity",
+    "description": "Web geliştirme ve yapay zeka odaklı yeniliklerde uzmanlaşmış önde gelen teknoloji çözümleri sağlayıcısı.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "social": "Bizi Takip Edin",
+    "copyright": "© 2025 Softinity. Tüm hakları saklıdır.",
+    "developed": "Samer Allaham tarafından geliştirildi"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "tryAgain": "Tekrar Dene",
+    "close": "Kapat",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "submit": "Gönder",
+    "search": "Ara",
+    "filter": "Filtrele",
+    "sort": "Sırala",
+    "showMore": "Daha Fazla Göster",
+    "showLess": "Daha Az Göster",
+    "readMore": "Devamını Oku",
+    "getStarted": "Başlayın",
+    "learnMore": "Daha Fazla Bilgi",
+    "viewAll": "Tümünü Görüntüle"
+  },
+  "notFound": {
+    "title": "Sayfa Bulunamadı",
+    "subtitle": "Aradığınız sayfa mevcut değil.",
+    "goHome": "Ana Sayfaya Git"
+  }
+}
